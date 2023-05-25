@@ -1,0 +1,15 @@
+{
+  "name": "expess-web",
+  "version": "1.0.0",
+  "description": "Making web Development using express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kisshor",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0"
+  }
+}

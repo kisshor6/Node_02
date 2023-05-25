@@ -1,0 +1,62 @@
+{{>header}}`
+<div class="container mr-10">
+    <div class="main_content">
+        <form action="" class="temp_form">
+            <input type="text" id="inputcityName" placeholder="Enter your city name" autocomplete="off">
+            <input type="submit" value="search" id="submitBtn">
+        </form>
+    </div>
+    <div class="tempInfo">
+        <div class="top_layer">
+            <p id="day">Wednesday</p>
+            <p id="today_data">13 Oct</p>
+        </div>
+        <div class="main_layer">
+            <p id="city_Name" ></p>
+            <div class="middle_layer Allhide">
+                <p> <span  id="temp">0</span> <sup>o</sup>C </p>
+                <p id="temp_status"> <i class="fa fa-cloud" aria-hidden="true"></i> </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{>footer}}
+<script src="main.js"></script>
+<script>
+
+
+
+    const getCurrentDay = ()=>{
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Suturday";
+
+        let currentTime = new Date();
+        days = weekday[currentTime.getDay()];
+        const day = document.getElementById('day');
+    
+        day.innerText = days;
+    };
+
+    getCurrentDay();
+
+        const getFullDate = ()=>{
+        const m = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var now = new Date();
+        var month = m[now.getMonth()];
+        var day = now.getDate();
+
+        const today = document.getElementById('today_data');
+        today.innerText = `${day}${month}`;
+
+   
+    };
+
+    getFullDate();
+</script>
